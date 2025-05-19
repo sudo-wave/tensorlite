@@ -2,10 +2,8 @@
 #include "vector.h"
 
 int main() {
-  float val;
-  for (int i = 0; i < 50; i++) {
-    val = bernoulli(0.5);
-    printf("Trial #%d: %f\n", i, val);
-  }
+  srand(time(NULL));
+  float res = rnd_uniform(0, 10);
+  printf("%f\n", res);
   return 0;
 }
