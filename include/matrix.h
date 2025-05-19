@@ -19,9 +19,11 @@ void mat_set(matrix *a, size_t ro, size_t co, float val);
 vector mat_get_col(matrix *a, size_t co);
 vector mat_get_row(matrix *a, size_t ro);
 
-void mat_print(matrix *a);
 matrix mat_ident(size_t d);
 matrix mat_bernoulli(size_t ro, size_t co, float p);
+matrix mat_uniform(size_t ro, size_t co, float lo, float hi);
+
+void mat_print(matrix *a);
 
 void mat_scale(matrix *a, float s);
 void mat_add(matrix *a, matrix *b);

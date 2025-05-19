@@ -8,9 +8,7 @@ float rnd_bernoulli(float p) {
   return 0.0;
 }
 
-float rnd_uniform(int lo, int hi) {
-  return 1.0 / ((rand() % (hi - lo + 1)) + lo);
-}
+float rnd_uniform(int lo, int hi) { return (rand() % (hi - lo + 1)) + lo; }
 
 float rnd_normal(float exp, float var) {
   float u1 = rnd_uniform(0, 1);

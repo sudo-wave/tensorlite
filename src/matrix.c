@@ -53,6 +53,26 @@ matrix mat_ident(size_t d) {
   return a;
 }
 
+matrix mat_bernoulli(size_t ro, size_t co, float p) {
+  matrix a = mat_alloc(ro, co);
+  for (size_t i = 0; i < a.row; i++) {
+    for (size_t j = 0; j < a.col; j++) {
+      mat_set(&a, i, j, rnd_bernoulli(p));
+    }
+  }
+  return a;
+}
+
+matrix mat_uniform(size_t ro, size_t co, float lo, float hi) {
+  matrix a = mat_alloc(ro, co);
+  for (size_t i = 0; i < a.row; i++) {
+    for (size_t j = 0; j < a.col; j++) {
+      mat_set(&a, i, j, rnd_uniform(lo, hi));
+    }
+  }
+  return a;
+}
+
 void mat_print(matrix *a) {
   for (size_t i = 0; i < a->row; i++) {
     for (size_t j = 0; j < a->col; j++) {
