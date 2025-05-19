@@ -7,10 +7,10 @@ LDIR=../lib
 
 LIBS=-lm
 
-_DEPS = vector.h random.h
+_DEPS = vector.h random.h matrix.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o vector.o random.o
+_OBJ = main.o vector.o random.o matrix.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
