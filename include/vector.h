@@ -16,6 +16,7 @@ float vec_get(vector *v, size_t idx);
 void vec_set(vector *v, size_t idx, float val);
 
 vector vec_ones(size_t d);
+vector vec_bernoulli(size_t dim, float p);
 
 void vec_scale(vector *v, float s);
 void vec_add(vector *v, vector *u);

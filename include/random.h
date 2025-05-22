@@ -8,4 +8,6 @@ float rnd_bernoulli(float p);
 float rnd_uniform(int lo, int hi);
 float rnd_normal(float exp, float var);
 
+float rnd_weight();
+
 #endif // !RANDOM_H
