@@ -7,10 +7,10 @@ LDIR=../lib
 
 LIBS=-lm
 
-_DEPS = vector.h random.h matrix.h activation.h perceptron.h
+_DEPS = random.h activation.h linalg.h perceptron.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = vector.o random.o matrix.o activation.o perceptron.o main.o
+_OBJ = random.o activation.o linalg.o perceptron.o main.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
